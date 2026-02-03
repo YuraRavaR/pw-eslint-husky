@@ -1,13 +1,18 @@
 {
   "name": "pw-eslint-husky",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playwright test automation framework with ESLint, Prettier, Husky, and lint-staged for code quality and pre-commit checks",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "report": "playwright show-report",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "keywords": [],
-  "author": "",
+  "author": "ravarx",
   "license": "ISC",
   "type": "module",
   "devDependencies": {

@@ -10,13 +10,7 @@ export default [
   ...tseslint.configs.recommended,
   prettierConfig,
   {
-    ignores: [
-      'node_modules/**',
-      'playwright-report/**',
-      'test-results/**',
-      'dist/**',
-      '.git/**',
-    ],
+    ignores: ['node_modules/**', 'playwright-report/**', 'test-results/**', 'dist/**', '.git/**'],
   },
   {
     files: ['**/*.{ts,mts,cts}'],
@@ -35,11 +29,8 @@ export default [
       },
     },
     rules: {
-      'prettier/prettier': ['warn', { singleQuote: true }],
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
-      ],
+      'prettier/prettier': ['warn', { singleQuote: true, printWidth: 110 }],
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/no-non-null-assertion': 'warn',

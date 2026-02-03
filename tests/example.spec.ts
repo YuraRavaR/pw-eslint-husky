@@ -9,6 +9,7 @@ test('has title', async ({ page }) => {
 
 test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
+  const test = 'bad code with unused variable'; // missing semicolon
   await page.getByRole('link', { name: 'Get started' }).isVisible();
 
   // Click the get started link.

@@ -321,12 +321,12 @@ Create your test in the `tests/` directory:
 
 ```typescript
 // tests/my-feature.spec.ts
-import { test, expect } from "@playwright/test";
+import { test, expect } from '@playwright/test';
 
-test.describe("My Feature", () => {
-  test("should do something", async ({ page }) => {
-    await page.goto("https://example.com");
-    await expect(page.getByRole("heading")).toBeVisible();
+test.describe('My Feature', () => {
+  test('should do something', async ({ page }) => {
+    await page.goto('https://example.com');
+    await expect(page.getByRole('heading')).toBeVisible();
   });
 });
 ```
@@ -493,23 +493,23 @@ npx prettier --write .
 
    ```typescript
    // ✅ Good
-   page.getByRole("button", { name: "Submit" });
-   page.getByText("Welcome");
-   page.getByLabel("Email");
+   page.getByRole('button', { name: 'Submit' });
+   page.getByText('Welcome');
+   page.getByLabel('Email');
 
    // ❌ Avoid
-   page.locator(".btn-primary");
-   page.locator("#submit-btn");
+   page.locator('.btn-primary');
+   page.locator('#submit-btn');
    ```
 
 2. **Use web-first assertions:**
 
    ```typescript
    // ✅ Good - auto-retrying
-   await expect(page.getByRole("heading")).toBeVisible();
+   await expect(page.getByRole('heading')).toBeVisible();
 
    // ❌ Avoid - no auto-retry
-   const heading = await page.locator("h1").isVisible();
+   const heading = await page.locator('h1').isVisible();
    expect(heading).toBe(true);
    ```
 
@@ -517,8 +517,8 @@ npx prettier --write .
 
    ```typescript
    // ✅ Good
-   await page.getByRole("button").click();
-   await expect(page.getByText("Success")).toBeVisible();
+   await page.getByRole('button').click();
+   await expect(page.getByText('Success')).toBeVisible();
 
    // ❌ Avoid
    await page.waitForTimeout(2000);

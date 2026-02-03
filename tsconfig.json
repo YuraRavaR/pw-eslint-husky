@@ -1,21 +1,19 @@
 {
-  "compilerOptions": {
-    "skipDefaultLibCheck": true,
-    "target": "ES2022",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "esModuleInterop": true,
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": false,
-    "skipLibCheck": true,
-    "resolveJsonModule": true,
-    "verbatimModuleSyntax": true,
-    "allowJs": true,
-    "baseUrl": ".",
-    "paths": {}
-  },
-  "exclude": [
-    "node_modules"
-  ]
+    "compilerOptions": {
+        "skipDefaultLibCheck": true,
+        "target": "ES2022",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "esModuleInterop": true,
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "exactOptionalPropertyTypes": false,
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "verbatimModuleSyntax": true,
+        "allowJs": true,
+        "baseUrl": ".",
+        "paths": {}
+    },
+    "exclude": ["node_modules"]
 }

@@ -88,6 +88,7 @@ pw-eslint-husky/
 │   └── pre-commit              # Pre-commit hook script
 ├── tests/
 │   └── example.spec.ts         # Example Playwright test
+├── .prettierrc.json            # Prettier code formatting configuration
 ├── eslint.config.mts           # ESLint configuration (flat config)
 ├── playwright.config.ts        # Playwright test configuration
 ├── tsconfig.json               # TypeScript compiler options
@@ -142,6 +143,29 @@ pw-eslint-husky/
    - `no-wait-for-timeout: warn` - Discourages hard waits
    - `prefer-web-first-assertions: warn` - Encourages `toBeVisible()` over manual checks
    - `no-networkidle: error` - Prevents unreliable networkidle waits
+
+---
+
+### `.prettierrc.json`
+
+**Purpose:** Prettier code formatting configuration.
+
+**Key Settings:**
+
+- `printWidth: 120` - Maximum line length before wrapping
+- `tabWidth: 2` - Number of spaces per indentation level
+- `useTabs: false` - Use spaces instead of tabs
+- `semi: true` - Add semicolons at the end of statements
+- `singleQuote: true` - Use single quotes instead of double quotes
+- `trailingComma: "all"` - Add trailing commas wherever possible
+- `bracketSpacing: true` - Add spaces inside object braces `{ foo: bar }`
+- `arrowParens: "avoid"` - Omit parentheses when possible in arrow functions `x => x`
+- `endOfLine: "lf"` - Use Unix-style line endings
+  **Special Overrides:**
+
+- JSON files use 4-space indentation for better readability
+
+This configuration ensures consistent code formatting across the entire project and integrates with ESLint through `eslint-plugin-prettier`.
 
 ---
 

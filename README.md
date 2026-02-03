@@ -266,7 +266,10 @@ cd pw-eslint-husky
 # 2. Install dependencies (also sets up Husky hooks via "prepare" script)
 npm install
 
-# 3. Install Playwright browsers
+# 3. Configure Git hooks path
+git config core.hooksPath .husky
+
+# 4. Install Playwright browsers
 npx playwright install
 ```
 
@@ -278,6 +281,34 @@ npx playwright test
 
 # View test report
 npx playwright show-report
+
+# Verify Git hooks are configured
+git config --get core.hooksPath
+# Should output: .husky
+```
+
+### ⚠️ Important: Setting Up Husky After Clone
+
+After cloning the repository, each developer must configure Git to use Husky hooks:
+
+```bash
+# This tells Git to look for hooks in .husky/ directory
+git config core.hooksPath .husky
+```
+
+**Why is this needed?**
+
+- Git hooks are not tracked in the repository for security reasons
+- The `prepare` script in package.json runs on `npm install`, but it doesn't always configure the hooks path
+- Without this configuration, pre-commit checks won't run
+
+**To verify it's working:**
+
+```bash
+# Check the configuration
+git config --get core.hooksPath
+
+# Try committing a file with .only() - it should be blocked
 ```
 
 ---
